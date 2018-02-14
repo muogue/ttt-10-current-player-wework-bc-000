@@ -1,11 +1,5 @@
 def current_player(board)
-  output = 0
-  index = 0
-  9.times do
-    output += position_taken?(board, index) ? 1 : 0
-    index += 1
-  end
-  output
+  turn_count(board) % 2 == 1 ? "O" : "X"
 end
 
 def turn_count(board)
